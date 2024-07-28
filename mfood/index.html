@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>M.Food</title>
+    <style>
+        .custom-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #BA975B;
+            text-decoration: none;
+            color: black;
+        }
+
+        .custom-icon {
+            font-size: 1.5rem;
+        }
+
+        .custom-search {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .custom-button {
+            background-color: #004d40;
+            color: white;
+            border-radius: 10px;
+            padding: 5px 10px;
+            border: none;
+        }
+        .custom-search .form-control {
+            font-size: 1.2rem; /* Mengatur ukuran font pada kolom pencarian */
+            padding: 10px; /* Menambahkan padding pada kolom pencarian */
+        }
+
+        .custom-search .custom-button {
+            font-size: 1.5rem; /* Mengatur ukuran font pada tombol scan */
+            padding: 10px 15px; /* Menambahkan padding pada tombol scan */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fill{
+            color: #015351;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-3 py-3 px-4">
+    <div class="d-flex align-items-center mb-4">
+        <div class="col-1">
+            <i class="bi bi-arrow-left custom-icon"></i>
+        </div>
+        <div class="col-10 text-center">
+            <h3>M.Food</h3>
+        </div>
+    </div>
+
+    <div class="custom-search mb-4">
+        <input type="text" id="searchInput" class="form-control" placeholder="Cari Disini" onkeyup="filterList()">
+        <button class="custom-button" onclick="window.location.href='scan.html'">
+            <i class="bi bi-qr-code-scan"></i>
+        </button>
+    </div>
+
+    <ul class="list-group" id="listGroup">
+        <a href="list-food.html" class="custom-list-item">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-buildings custom-icon me-3"></i>
+                <span>Royal XXI</span>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+        <a href="ciputra.html" class="custom-list-item">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-buildings custom-icon me-3"></i>
+                <span>Ciputra Mall XXI</span>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+        <a href="transmart.html" class="custom-list-item">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-buildings custom-icon me-3"></i>
+                <span>Transmart</span>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+        <a href="galaxy.html" class="custom-list-item">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-buildings custom-icon me-3"></i>
+                <span>Galaxy XXI</span>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+        <a href="delta.html" class="custom-list-item">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-buildings custom-icon me-3"></i>
+                <span>Delta XXI</span>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+        <a href="pakuwoncity.html" class="custom-list-item">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-buildings custom-icon me-3"></i>
+                <span>Pakuwon City XXI</span>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+        <a href="pakuwonmall.html" class="custom-list-item">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-buildings custom-icon me-3"></i>
+                <span>Pakuwon Mall XXI</span>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+        <a href="grancity.html" class="custom-list-item">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-buildings custom-icon me-3"></i>
+                <span>Gran City XXI</span>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+        <a href="tunjungan3.html" class="custom-list-item">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-buildings custom-icon me-3"></i>
+                <span>Tunjungan 3 XXI</span>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+        <a href="tunjungan5.html" class="custom-list-item">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-buildings custom-icon me-3"></i>
+                <span>Tunjungan 5 XXI</span>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </ul>
+</div>
+
+<!-- Bottom Navbar -->
+<nav class="navbar fixed-bottom navbar-light bg-light border-top">
+    <div class="container-fluid justify-content-around">
+        <a class="navbar-brand" href="../index.html">
+            <div class="d-flex flex-column align-items-center">
+                <i class="bi bi-house-door"></i>
+                <span>Utama</span>
+            </div>
+        </a>
+        <a class="navbar-brand" href="../nearby/index.html">
+            <div class="d-flex flex-column align-items-center">
+                <i class="bi bi-geo-alt"></i>
+                <span>Terdekat</span>
+            </div>
+        </a>
+        <a class="navbar-brand" href="index.html">
+            <div class="d-flex flex-column align-items-center">
+                <i class="bi bi-basket-fill fill"></i>
+                <span>M.Food</span>
+            </div>
+        </a>
+        <a class="navbar-brand" href="../riwayat/index.html">
+            <div class="d-flex flex-column align-items-center">
+                <i class="bi bi-clock-history"></i>
+                <span>Riwayat</span>
+            </div>
+        </a>
+        <a class="navbar-brand" href="../profil/index.html">
+            <div class="d-flex flex-column align-items-center">
+                <i class="bi bi-person"></i>
+                <span>Profil</span>
+            </div>
+        </a>
+    </div>
+</nav>
+
+<!-- Optional JavaScript; choose one of the two! -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/app.js"></script>
+
+<script>
+    function filterList() {
+        let input = document.getElementById('searchInput');
+        let filter = input.value.toLowerCase();
+        let listGroup = document.getElementById('listGroup');
+        let items = listGroup.getElementsByClassName('custom-list-item');
+
+        for (let i = 0; i < items.length; i++) {
+            let item = items[i];
+            let text = item.textContent || item.innerText;
+            if (text.toLowerCase().indexOf(filter) > -1) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        }
+    }
+</script>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

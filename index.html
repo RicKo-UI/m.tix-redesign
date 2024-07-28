@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Register</title>
+    <style>
+        .overflow-auto{
+            overflow: hidden;
+        }
+        .card{
+            border: 0;
+        }
+        .fill{
+            color: #015351;
+        }
+        .card-title{
+            color: black;
+        }
+        .kupon{
+            background-color: #f2f2f2;
+            border-color: #BA975B;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .modal-title {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .modal-header .btn-close {
+            position: absolute;
+            right: 1rem;
+        }
+        .list-kupon{
+            background-color: #f2f2f2;
+        }
+        .modal-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+        }
+        .lokasi{
+            color: #172221;
+        }
+        .lokasi .geo-icon{
+            color: #BA975B;
+        }
+    </style>
+  </head>
+  <body onload="filterGenre('all')">
+
+    <div class="container mt-3 py-3 mb-5 px-4">
+      <div class="d-flex justify-content-between mb-3">
+          <div>
+              <h1>Selamat Datang <span class="text-primary">Jack</span></h1>
+              <h2>Mau <span class="text-primary">nonton</span> apa?</h2>
+          </div>
+          <div>
+            <a href="inbox.html">
+                <i class="bi bi-chat-dots lokasi"></i>
+            </a>
+          </div>
+      </div>
+      <div class="d-flex align-items-center mb-4">
+        <a href="lokasi.html" class="text-decoration-none lokasi">
+            <i class="bi bi-geo-alt geo-icon"></i>
+            <span>Surabaya</span>
+            <img src="images/arrow-down.png" alt="">
+        </a>
+      </div>
+      <div class="d-flex overflow-auto mb-3">
+        <div class="card col-8 mb-3 me-3 border-0">
+          <img src="images/banner1.png" class="card-img-top w-80" alt="Promo Ceria">
+        </div>
+        <div class="card col-8 mb-3">
+          <img src="images/banner2.png" class="card-img-top w-80" alt="Promo Ceria">
+        </div>
+      </div>
+      <div id="coupon-alert" class="alert border-1 kupon rounded-3 d-flex justify-content-between align-items-center" role="alert">
+        <span id="coupon-text">Kamu ada 4 Kupon, cek sekarang!</span>
+        <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#couponModal">Cek</a>
+      </div>
+      <h3 class="mb-3">Genres</h3>
+      <div class="d-flex overflow-auto mb-3">
+        <button class="btn btn-primary text-white me-2 py-2 px-4" id="all-genre-btn" onclick="filterGenre('all')">All</button>
+        <button class="btn btn-outline-secondary me-2 py-2 px-4" onclick="filterGenre('comedy')">Comedy</button>
+        <button class="btn btn-outline-secondary me-2 py-2 px-4" onclick="filterGenre('romance')">Romance</button>
+        <button class="btn btn-outline-secondary py-2 px-4" onclick="filterGenre('horror')">Horror</button>
+      </div>
+      <h3 class="my-4">New Release</h3>
+      <div class="d-flex overflow-auto mb-3" id="new-release">
+          <div class="card me-3 genre-horror" style="min-width: 150px;">
+              <img src="images/home/quite-place.png" class="card-img-top" alt="A Quiet Place">
+              <div class="card-body">
+                  <h5 class="card-title">A Quiet Place</h5>
+                  <p class="card-text">2H 15M | Horror</p>
+              </div>
+          </div>
+          <div class="card me-3 genre-family" style="min-width: 150px;">
+              <img src="images/home/inside-out2.png" class="card-img-top" alt="Inside Out 2">
+              <div class="card-body">
+                  <h5 class="card-title">Inside Out 2</h5>
+                  <p class="card-text">1H 45M | Family</p>
+              </div>
+          </div>
+          <div class="card me-3 genre-action" style="min-width: 150px;">
+              <img src="images/home/GodzilaXKong.png" class="card-img-top" alt="Godzilla vs Kong">
+              <div class="card-body">
+                  <h5 class="card-title">Godzilla vs Kong</h5>
+                  <p class="card-text">2H 0M | Action</p>
+              </div>
+          </div>
+      </div>
+      <h3 class="my-4">Popular</h3>
+      <div class="d-flex overflow-auto mb-5" id="popular">
+        <a href="home/detail-tiket.html" class="text-decoration-none">
+            <div class="card me-3 genre-action" style="min-width: 150px;">
+                <img src="images/home/Rogue-One.png" class="card-img-top" alt="Rogue One">
+                <div class="card-body">
+                    <h5 class="card-title">Rogue One</h5>
+                    <p class="card-text">2H 12M | Action</p>
+                </div>
+            </div>
+        </a>
+          
+          <div class="card me-3 genre-physiology" style="min-width: 150px;">
+              <img src="images/home/Joker.png" class="card-img-top" alt="Joker">
+              <div class="card-body">
+                  <h5 class="card-title">Joker</h5>
+                  <p class="card-text">1H 30M | Physiology</p>
+              </div>
+          </div>
+          <div class="card me-3 genre-action" style="min-width: 150px;">
+              <img src="images/home/spider-man.png" class="card-img-top" alt="Spider-Man">
+              <div class="card-body">
+                  <h5 class="card-title">Spider-Man</h5>
+                  <p class="card-text">2H 15M | Action</p>
+              </div>
+          </div>
+      </div>
+       <!-- Bottom Navbar -->
+    <nav class="navbar fixed-bottom navbar-light bg-light border-top">
+      <div class="container-fluid justify-content-around">
+          <a class="navbar-brand" href="index.html">
+              <div class="d-flex flex-column align-items-center">
+                  <i class="bi bi-house-door-fill fill"></i>
+                  <span>Utama</span>
+              </div>
+          </a>
+          <a class="navbar-brand" href="nearby/index.html">
+              <div class="d-flex flex-column align-items-center">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Terdekat</span>
+              </div>
+          </a>
+          <a class="navbar-brand" href="mfood/index.html">
+              <div class="d-flex flex-column align-items-center">
+                  <i class="bi bi-basket"></i>
+                  <span>M.Food</span>
+              </div>
+          </a>
+          <a class="navbar-brand" href="riwayat/index.html">
+              <div class="d-flex flex-column align-items-center">
+                  <i class="bi bi-clock-history"></i>
+                  <span>Riwayat</span>
+              </div>
+          </a>
+          <a class="navbar-brand" href="profil/index.html">
+              <div class="d-flex flex-column align-items-center">
+                  <i class="bi bi-person"></i>
+                  <span>Profil</span>
+              </div>
+          </a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="couponModal" tabindex="-1" aria-labelledby="couponModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-bottom">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="couponModalLabel">Kupon</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="list-group border-0">
+            <div class="list-group-item d-flex justify-content-between align-items-center border-0 list-kupon py-4 mb-3">
+              <span><i class="bi bi-ticket"></i> Diskon tiket nonton 20%</span>
+              <a href="detail_kupon.html" class="text-decoration-none text-primary pakai-link">2 Voucher</a>
+            </div>
+            <div class="list-group-item d-flex justify-content-between align-items-center border-0 list-kupon py-4 mb-3">
+              <span><i class="bi bi-ticket"></i> Diskon tiket nonton 10%</span>
+              <a href="#" class="text-decoration-none text-primary pakai-link">Pakai</a>
+            </div>
+            <div class="list-group-item d-flex justify-content-between align-items-center border-0 list-kupon py-4 mb-3">
+              <span><i class="bi bi-shop"></i> Diskon M.Food 10%</span>
+              <a href="#" class="text-decoration-none text-primary pakai-link">Pakai</a>
+            </div>
+            <div class="list-group-item d-flex justify-content-between align-items-center border-0 list-kupon py-4 mb-3">
+              <span><i class="bi bi-shop"></i> Diskon M.Food 5%</span>
+              <a href="#" class="text-decoration-none text-primary pakai-link">Pakai</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

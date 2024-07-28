@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Register</title>
+    <style>
+        .seat {
+          width: 40px;
+          height: 40px;
+          margin: 5px;
+          cursor: pointer;
+        }
+        .seat.kosong {
+          background-color: #e0e0e0;
+        }
+        .seat.terisi {
+          background-color: #004d4d;
+        }
+        .seat.dipilih {
+          background-color: #c5a880;
+        }
+        .screen {
+            width: 100%;
+            height: 20px;
+            background-color: #e0e0e0;
+            margin-bottom: 10px;
+        }
+        .info-kursi div span {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 5px;
+            border-radius: 5px;
+        }
+        .total-amount {
+            color: #AA8A58;
+        }
+        .btn-custom {
+            background-color: #005F5F;
+            color: white;
+            border-radius: 10px;
+        }
+        .btn-primary:hover, .btn-primar:focus, .btn-primary:active {
+            background-color: #005F5F;
+            color: white;
+            outline: none;
+            box-shadow: none;
+        }
+        .modal-header {
+            border-bottom: none;
+        }
+        .modal-content {
+            border-radius: 10px;
+        }
+        .btn-no {
+            border: 1px solid #AA8A58;
+            color: black;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .btn-yes {
+            background-color: #005F5F;
+            color: white;
+            border-radius: 10px;
+        }
+        .modal-body {
+            text-align: center;
+        }
+        .modal-footer {
+            border-top: none;
+            justify-content: center;
+        }
+      </style>
+  </head>
+  <body>
+
+    <div class="container text-center mt-4">
+        <h2 class="mb-4">Pilih Kursi</h2>
+        <img src="../images/home/Screen.png" class="img-fluid w-100" alt="">
+        <div class="d-flex justify-content-start flex-wrap">
+          <!-- Kursi -->
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div style="width: 40px; height: 40px; margin: 5px;" class="mb-4"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div style="width: 40px; height: 40px; margin: 5px;" class="mb-4"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div style="width: 40px; height: 40px; margin: 5px;" class="mb-4"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div style="width: 40px; height: 40px; margin: 5px;" class="mb-4"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div style="width: 40px; height: 40px; margin: 5px;" class="mb-4"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div style="width: 40px; height: 40px; margin: 5px;" class="mb-4"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div style="width: 40px; height: 40px; margin: 5px;" class="mb-4"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div style="width: 40px; height: 40px; margin: 5px;" class="mb-4"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat terisi mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat kosong mb-4" data-price="35000"></div>
+          <div class="seat terisi mb-4" data-price="35000"></div>
+          <div class="seat terisi mb-4" data-price="35000"></div>
+          <div class="seat terisi mb-4" data-price="35000"></div>
+          <div class="seat terisi mb-4" data-price="35000"></div>
+          <!-- Add more seats as needed -->
+        </div>
+        <div class="info-kursi d-flex justify-content-center mt-4">
+          <div class="d-flex align-items-center mx-2">
+            <span class="seat terisi"></span> Terisi
+          </div>
+          <div class="d-flex align-items-center mx-2">
+            <span class="seat dipilih"></span> Dipilih
+          </div>
+          <div class="d-flex align-items-center mx-2">
+            <span class="seat kosong"></span> Kosong
+          </div>
+        </div>
+      </div>
+    
+      <div class="container mt-5 mb-3 fixed-bottom">
+        <div class="row">
+            <div class="col-3 text-center">
+                <div class="text-muted">Total</div>
+                <div class="total-amount" id="totalPrice">Rp 0</div>
+            </div>
+            <div class="col-9">
+              <button class="btn btn-primary w-100 py-3" data-bs-toggle="modal" data-bs-target="#paymentModal">Pembayaran</button>
+            </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100 text-center" id="paymentModalLabel">Pesan M.Food?</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="text-muted">Mau pesan makanan dan minuman untuk nemenin nonton kamu?</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="transaksi1.html" class="btn btn-no me-2">Tidak</a>
+                  <a href="mfood.html" class="btn btn-yes">Iya Mau</a>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/app.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const seats = document.querySelectorAll('.seat.kosong');
+          const totalPriceElement = document.getElementById('totalPrice');
+          let totalPrice = 0;
+    
+          seats.forEach(seat => {
+            seat.addEventListener('click', () => {
+              if (seat.classList.contains('dipilih')) {
+                seat.classList.remove('dipilih');
+                totalPrice -= parseInt(seat.getAttribute('data-price'));
+              } else {
+                seat.classList.add('dipilih');
+                totalPrice += parseInt(seat.getAttribute('data-price'));
+              }
+              totalPriceElement.textContent = `Rp ${totalPrice}`;
+            });
+          });
+        });
+    </script>
+
+  </body>
+</html>

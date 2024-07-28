@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detail Transaksi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .modal-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+      }
+      .modal-content {
+        border-radius: 1rem 1rem 0 0;
+      }
+      .bi-arrow-left{
+        size: 1.5rem;
+        color: black;
+      }
+      .gopay{
+        padding: 0;
+      }
+      .btn-outline-secondary{
+        background-color: #fff;
+      }
+      .kupon{
+        background-color: #f2f2f2;
+        border-color: #BA975B;
+      }
+      .modal-header {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    .modal-title {
+      flex-grow: 1;
+      text-align: center;
+    }
+    .modal-header .btn-close {
+      position: absolute;
+      right: 1rem;
+    }
+    .list-kupon{
+      background-color: #f2f2f2;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4 px-4 py-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <a href="pilih-kursi.html" class="btn btn-link"><i class="bi bi-arrow-left"></i></a>
+        <h4 class="mb-0">Pembayaran</h4>
+        <div></div>
+      </div>
+    
+      <div class="mt-4">
+        <div class="d-flex">
+          <img src="../images/home/Rogue-One.png" class="img-thumbnail border-0" style="width: 150px;" alt="Star Wars">
+          <div class="ms-3">
+            <h5>Star Wars : Rogue One</h5>
+            <p>Action</p>
+            <p>Bioskop A</p>
+            <p>17 Juni, 20:00</p>
+            <p>Studio 1</p>
+          </div>
+        </div>
+    
+        <div class="mt-4">
+          <h5>Pesanan M.Food</h5>
+          <div class="d-flex">
+          </div>
+        </div>
+    
+        <hr>
+    
+        <div>
+          <div class="d-flex justify-content-between mb-3">
+            <span>Kode Pembayaran</span>
+            <span>1234×123z567</span>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <span>Pilihan Kursi</span>
+            <span>D1, D2</span>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <span>Harga/tiket</span>
+            <span>Rp 35.000</span>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <span>Biaya Admin</span>
+            <span>Rp 5.000</span>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between fw-bold mb-3">
+            <span>Total Keseluruhan</span>
+            <span class="text-primary">Rp 163.000</span>
+          </div>
+        </div>
+    
+    
+        <div class="mt-5 mb-4">
+          <label for="paymentDropdown" class="form-label">Metode Pembayaran</label>
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary border-0 gopay dropdown-toggle d-flex align-items-center justify-content-between w-100" type="button" id="paymentDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex align-items-center">
+                <img src="../images/home/gopay.png" alt="Gopay" class="me-2" id="selectedPaymentLogo" style="width: 32px; height: 32px;">
+                <span id="selectedPaymentText">Gopay</span>
+              </div>
+              <span class="dropdown-arrow"></span>
+            </button>
+            <ul class="dropdown-menu w-100" aria-labelledby="paymentDropdown">
+              <li class="">
+                <a class="dropdown-item d-flex align-items-center payment-option" href="#" data-logo="path/to/gopay-logo.png" data-text="Gopay">
+                  <img src="../images/home/gopay.png" alt="Gopay" class="me-2" style="width: 32px; height: 32px;">
+                  Gopay
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center payment-option" href="#" data-logo="path/to/ovo-logo.png" data-text="OVO">
+                  <img src="../images/home/allobank-logo.png" alt="Allo Bank" class="me-2" style="width: 32px; height: 32px;">
+                  OVO
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center payment-option" href="#" data-logo="path/to/dana-logo.png" data-text="DANA">
+                  <img src="../images/home/mandiri-logo.png" alt="Mandiri" class="me-2" style="width: 32px; height: 32px;">
+                  DANA
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div id="coupon-alert" class="alert border-1 kupon rounded-3 d-flex justify-content-between align-items-center" role="alert">
+          <span id="coupon-text">Kamu ada 4 Kupon, cek sekarang!</span>
+          <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#couponModal">Cek</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <a href="tiket1.html" class="btn btn-primary w-100 py-3">Bayar Sekarang</a>
+    </div>
+  
+   <!-- Modal -->
+   <div class="modal fade" id="couponModal" tabindex="-1" aria-labelledby="couponModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-bottom">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="couponModalLabel">Kupon</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="list-group border-0">
+            <div class="list-group-item d-flex justify-content-between align-items-center border-0 list-kupon py-4 mb-3">
+              <span><i class="bi bi-ticket"></i> Diskon tiket nonton 20%</span>
+              <a href="#" class="text-decoration-none text-primary pakai-link">Pakai</a>
+            </div>
+            <div class="list-group-item d-flex justify-content-between align-items-center border-0 list-kupon py-4 mb-3">
+              <span><i class="bi bi-ticket"></i> Diskon tiket nonton 10%</span>
+              <a href="#" class="text-decoration-none text-primary pakai-link">Pakai</a>
+            </div>
+            <div class="list-group-item d-flex justify-content-between align-items-center border-0 list-kupon py-4 mb-3">
+              <span><i class="bi bi-shop"></i> Diskon M.Food 10%</span>
+              <a href="#" class="text-decoration-none text-primary pakai-link">Pakai</a>
+            </div>
+            <div class="list-group-item d-flex justify-content-between align-items-center border-0 list-kupon py-4 mb-3">
+              <span><i class="bi bi-shop"></i> Diskon M.Food 5%</span>
+              <a href="#" class="text-decoration-none text-primary pakai-link">Pakai</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- Bootstrap Bundle with Popper -->
+     <!-- Optional JavaScript; choose one of the two! -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="../js/app.js"></script>
+ 
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+
+    <script>
+      function useCoupon(couponText) {
+    document.getElementById('coupon-text').innerText = couponText;
+  }
+
+  document.querySelectorAll('.pakai-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      const couponText = this.parentElement.querySelector('span').innerText;
+      useCoupon(`Kupon yang dipakai: ${couponText}`);
+      var myModalEl = document.getElementById('couponModal');
+      var modal = bootstrap.Modal.getInstance(myModalEl);
+      modal.hide();
+    });
+  });
+
+      document.querySelectorAll('.payment-option').forEach(function(option) {
+        option.addEventListener('click', function() {
+          const selectedLogo = this.getAttribute('data-logo');
+          const selectedText = this.getAttribute('data-text');
+          
+          document.getElementById('selectedPaymentLogo').src = selectedLogo;
+          document.getElementById('selectedPaymentText').textContent = selectedText;
+        });
+      });
+    </script>
+  </body>
+</html>

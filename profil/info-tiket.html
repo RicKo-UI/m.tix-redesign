@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>FAQ</title>
+    <style>
+        body {
+            background-color: #fff;
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .icon-custom{
+            color: black;
+            size: 1.5rem;
+        }
+        .btn-link{
+            color: black;
+        }
+        .btn-link:active{
+            color: black;
+            border : none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-3 py-3 px-4">
+        <div class="profile-header">
+            <a href="faq.html">
+              <i class="bi bi-arrow-left icon-custom"></i>
+            </a>
+            <h4 class="m-0">Ubah Profil</h4>
+            <div></div>
+          </div>
+        <div class="accordion" id="faqAccordion">
+            <div class="faq-item my-4">
+                <div class="d-flex justify-content-between align-items-center" id="headingOne">
+                    <button class="btn btn-link text-decoration-none text-start flex-grow-1 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Bagaimana cara melakukan transaksi (pembelian tiket) melalui M.Tix?
+                    </button>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="faq-answer my-3">
+                        <p>Untuk melakukan transaksi pembelian tiket melalui M.Tix, Anda dapat mengunduh aplikasi M.Tix dari Play Store atau App Store, kemudian ikuti langkah-langkah pendaftaran dan pilih film yang ingin Anda tonton.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item my-4">
+                <div class="d-flex justify-content-between align-items-center" id="headingTwo">
+                    <button class="btn btn-link text-decoration-none text-start flex-grow-1 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Apakah ada syarat atau informasi tambahan lain untuk pembelian M.Tix?
+                    </button>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="faq-answer my-3">
+                        <p>Ya, untuk pembelian tiket melalui M.Tix, Anda harus memiliki akun terverifikasi. Pastikan juga untuk memeriksa informasi tambahan seperti syarat dan ketentuan yang berlaku.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item my-4">
+                <div class="d-flex justify-content-between align-items-center" id="headingThree">
+                    <button class="btn btn-link text-decoration-none text-start flex-grow-1 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Bagaimana jika pembelian tiket saya ditolak atau dibatalkan oleh M.Tix?
+                    </button>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="faq-answer my-3">
+                        <p>Jika pembelian tiket Anda ditolak atau dibatalkan oleh M.Tix, Anda dapat menghubungi layanan pelanggan untuk mendapatkan informasi lebih lanjut mengenai alasan pembatalan dan proses pengembalian dana jika diperlukan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/app.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

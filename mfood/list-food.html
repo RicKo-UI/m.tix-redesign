@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>M.Food</title>
+    <style>
+        .product-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .product-info {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .product-info img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .btn-quantity {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+        }
+        .quantity {
+            width: 30px;
+            text-align: center;
+        }
+        .custom-search {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .custom-button {
+            background-color: #004d40;
+            color: white;
+            border-radius: 10px;
+            padding: 5px 10px;
+            border: none;
+        }
+        .custom-search .form-control {
+            font-size: 1.2rem; /* Mengatur ukuran font pada kolom pencarian */
+            padding: 10px; /* Menambahkan padding pada kolom pencarian */
+            background-color: #f2f2f2;
+            border: none;
+        }
+
+        .custom-search .custom-button {
+            font-size: 1.5rem; /* Mengatur ukuran font pada tombol scan */
+            padding: 10px 15px; /* Menambahkan padding pada tombol scan */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .total-item-section {
+        background-color: #F0F0F0;
+        padding: 10px 20px;
+        border-top: 1px solid #ddd;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .total-item-text {
+        font-size: 0.8rem;
+        color: #666666;
+    }
+
+    .total-item-number {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    #checkout-button {
+        background-color: #004d40;
+        color: white;
+        border: none;
+        border-radius: 8px;
+    }
+
+    #checkout-button:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+    }
+    .bi-arrow-left{
+        size: 1.5rem;
+        color: black;
+    }
+    .profile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+    </style>
+</head>
+<body>
+
+    <div class="container py-5 px-4">
+        <div class="profile-header">
+            <a href="#">
+              <i class="bi bi-arrow-left icon-custom"></i>
+            </a>
+            <h4 class="m-0">Ubah Profil</h4>
+            <div></div>
+        </div>
+        <div class="custom-search mb-5 my-4">
+            <input type="text" class="form-control" placeholder="Cari Disini">
+        </div>
+        <h5>Promo Combo</h5>
+        <div class="product-list" id="promo-combo">
+            <div class="product-item border-0">
+                <div class="product-info">
+                    <img src="../images/food/food1.png" alt="Product">
+                    <div>
+                        <h6 class="m-0">Combo 1 Plus</h6>
+                        <p class="m-0">2 Pop Corn Caramel + 1 Spicy Hot Dog + 2 Drink</p>
+                        <div class="d-flex align-items-center">
+                            <p class="m-0 me-3">Rp 88.000</p>
+                            <button class="btn btn-primary" onclick="addItem(this)">Tambah</button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <!-- More products can be added here similarly -->
+        </div>
+    
+        <h5 class="mt-4">Paket Solo</h5>
+        <div class="product-list" id="paket-solo">
+            <div class="product-item border-0">
+                <div class="product-info">
+                    <img src="../images/food/food4.png" alt="Product">
+                    <div>
+                        <h6 class="m-0">Solo 1</h6>
+                        <p class="m-0">2 Pop Corn Caramel + 1 Spicy Hot Dog + 2 Drink</p>
+                        <div class="d-flex align-items-center">
+                            <p class="m-0 me-3">Rp 88.000</p>
+                            <button class="btn btn-primary" onclick="addItem(this)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- More products can be added here similarly -->
+        </div>
+    </div>
+
+
+    <div class="container mt-5 mb-3 fixed-bottom">
+        <div class="row">
+            <div class="col-3 text-center">
+                <div class="text-muted">Total</div>
+                <div class="total-amount" id="total-items">0 Item</div>
+            </div>
+            <div class="col-9">
+                <a href="transaksi-food.html" id="checkout-button" class="btn btn-primary w-100 py-3">Pembayaran</a>
+            </div>
+        </div>
+      </div>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let totalItems = 0;
+    
+        function addItem(button) {
+            const parent = button.parentElement;
+            const quantityControl = document.createElement('div');
+            quantityControl.className = 'quantity-control d-flex align-items-center';
+            quantityControl.innerHTML = `
+                <button class="btn btn-outline-secondary btn-sm" onclick="decreaseQuantity(this)">-</button>
+                <span class="quantity mx-2">1</span>
+                <button class="btn btn-outline-secondary btn-sm" onclick="increaseQuantity(this)">+</button>
+            `;
+            parent.innerHTML = '';
+            parent.appendChild(quantityControl);
+            updateTotalItems(1);
+        }
+    
+        function increaseQuantity(button) {
+            const quantitySpan = button.previousElementSibling;
+            let quantity = parseInt(quantitySpan.textContent);
+            quantity++;
+            quantitySpan.textContent = quantity;
+            updateTotalItems(1);
+        }
+    
+        function decreaseQuantity(button) {
+            const quantitySpan = button.nextElementSibling;
+            let quantity = parseInt(quantitySpan.textContent);
+            if (quantity > 1) {
+                quantity--;
+                quantitySpan.textContent = quantity;
+                updateTotalItems(-1);
+            } else {
+                const parent = button.parentElement.parentElement;
+                const originalContent = `
+                    <p class="m-0 me-3">Rp 88.000</p>
+                    <button class="btn btn-primary" onclick="addItem(this)">Tambah</button>
+                `;
+                parent.innerHTML = originalContent;
+                updateTotalItems(-1);
+            }
+        }
+    
+        function updateTotalItems(amount) {
+            totalItems += amount;
+            document.getElementById('total-items').textContent = totalItems + " Item";
+            const checkoutButton = document.getElementById('checkout-button');
+            if (totalItems > 0) {
+                checkoutButton.disabled = false;
+            } else {
+                checkoutButton.disabled = true;
+            }
+        }
+    </script>
+    
+    
+<!-- Optional JavaScript; choose one of the two! -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/app.js"></script>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

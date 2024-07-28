@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Register</title>
+    <style>
+        .film-item {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #008080;
+            color: white;
+        }
+        .nav-tabs .nav-link {
+            border: none;
+        }
+        .film-title {
+            font-weight: bold;
+        }
+        .film-info {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .film-price {
+            color: #dcb075;
+        }
+        .fill{
+            color: #015351;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #054b39; /* Sesuaikan dengan kebutuhan */
+            color: #fff;
+            border-radius: 10px;
+        }
+        .nav-tabs .nav-link {
+            color: #000;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="container mt-3 py-3 px-4">
+        <h3 class="mb-3 text-center">Riwayat</h3>
+        <div class="d-flex justify-content-center">
+            <ul class="nav nav-tabs my-4 border-0">
+                <li class="nav-item">
+                    <a class="nav-link active py-3 px-3" id="tiket-film-tab" data-bs-toggle="tab" href="#tiket-film" role="tab" aria-controls="tiket-film" aria-selected="true">Tiket Film</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-3 px-3" id="mfood-tab" data-bs-toggle="tab" href="#mfood" role="tab" aria-controls="mfood" aria-selected="false">M.Food</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content mt-3">
+            <div class="tab-pane fade show active" id="tiket-film" role="tabpanel" aria-labelledby="tiket-film-tab">
+                <div class="film-item" onclick="location.href='detail-film.html'">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../images/home/spider-man.png" class="img-fluid rounded" alt="Across The Spider Verse">
+                        </div>
+                        <div class="col-9">
+                            <div class="film-title">Across The Spider Verse</div>
+                            <div class="film-info">Adventure, Action, Superhero</div>
+                            <div class="film-price">Rp 35.000 - Gopay</div>
+                            <div class="film-info">17 Juni 2024</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item" onclick="location.href='detail-film.html'">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../images/home/GodzilaXKong.png" class="img-fluid rounded" alt="Godzilla x Kong: The New Empire">
+                        </div>
+                        <div class="col-9">
+                            <div class="film-title">Godzilla x Kong: The New Empire</div>
+                            <div class="film-info">Adventure, Action, Superhero</div>
+                            <div class="film-price">Rp 25.000 - Gopay</div>
+                            <div class="film-info">17 Juni 2024</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item" onclick="location.href='detail-film.html'">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../images/home/Joker.png" class="img-fluid rounded" alt="Oppenheimer">
+                        </div>
+                        <div class="col-9">
+                            <div class="film-title">Oppenheimer</div>
+                            <div class="film-info">Adventure, Action, Superhero</div>
+                            <div class="film-price">Rp 35.000 - Sakuku</div>
+                            <div class="film-info">17 Juni 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="mfood" role="tabpanel" aria-labelledby="mfood-tab">
+                <div class="film-item" onclick="location.href='detail-film.html'">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../images/food/food1.png" class="img-fluid rounded" alt="Across The Spider Verse">
+                        </div>
+                        <div class="col-9">
+                            <div class="film-title">Combo 1 Plus</div>
+                            <div class="film-info">Pop Corn + Hotdog + Drink</div>
+                            <div class="film-price">Rp 35.000 - Gopay</div>
+                            <div class="film-info">17 Juni 2024</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item" onclick="location.href='detail-film.html'">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../images/food/food3.png" class="img-fluid rounded" alt="Godzilla x Kong: The New Empire">
+                        </div>
+                        <div class="col-9">
+                            <div class="film-title">Combo 2 Plus</div>
+                            <div class="film-info">Nasi Goreng + Hamburger + Drink</div>
+                            <div class="film-price">Rp 35.000 - Gopay</div>
+                            <div class="film-info">14 Juni 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Navbar -->
+    <nav class="navbar fixed-bottom navbar-light bg-light border-top">
+        <div class="container-fluid justify-content-around">
+            <a class="navbar-brand" href="../index.html">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="bi bi-house-door"></i>
+                    <span>Utama</span>
+                </div>
+            </a>
+            <a class="navbar-brand" href="../nearby/index.html">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Terdekat</span>
+                </div>
+            </a>
+            <a class="navbar-brand" href="index.html">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="bi bi-basket"></i>
+                    <span>M.Food</span>
+                </div>
+            </a>
+            <a class="navbar-brand" href="../riwayat/index.html">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="bi bi-clock-fill fill"></i>
+                    <span>Riwayat</span>
+                </div>
+            </a>
+            <a class="navbar-brand" href="../profil/index.html">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="bi bi-person"></i>
+                    <span>Profil</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+     <!-- Optional JavaScript; choose one of the two! -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="../js/app.js"></script>
+ 
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+   </body>
+ </html>

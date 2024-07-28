@@ -1,0 +1,68 @@
+body {
+    background-color: #ffffff;
+}
+
+h1, h2, h3 {
+    color: #000;
+}
+
+.text-primary {
+    color: #004d40 !important; /* Change the primary color to green */
+}
+
+.btn-primary {
+    border-color: #004d40;
+    color: #fff;
+    background-color: #004d40;
+}
+
+.card {
+    min-width: 150px;
+}
+
+.card-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.btn-outline-primary {
+    border-color: #004d40;
+    color: #004d40;
+}
+
+.btn-outline-primary:hover {
+    background-color: #004d40;
+    color: #fff;
+}
+
+.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.navbar-brand {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.navbar-brand .bi {
+    font-size: 1.5rem;
+}
+
+.bi-house-door, .bi-geo-alt, .bi-cart, .bi-clock-history, .bi-person, .bi-chat-dots {
+    font-size: 1.5rem;
+}
+
+.genre-horror, .genre-family, .genre-action, .genre-physiology {
+    display: none;
+}

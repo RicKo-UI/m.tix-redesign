@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Register</title>
+    <style>
+        .large-icon {
+          font-size: 1.5rem; /* Adjust the size as needed */
+          color: black;
+        }
+        .custom-badge {
+            border: 1px solid #d4a373; /* Adjust color to your needs */
+            background-color: transparent;
+            color: #000;
+            border-radius: 10px;
+            padding: 0.3rem 1rem;
+            margin-right: 0.5rem;
+        }
+        .custom-badge:hover {
+            background-color: #d4a373; /* Adjust hover color to your needs */
+            color: #fff;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #054b39; /* Adjust color to your needs */
+            color: #fff;
+            border-radius: 10px;
+        }
+        .nav-tabs .nav-link {
+            color: #000;
+        }
+        .nav-tabs .nav-item {
+            margin-right: 1rem;
+        }
+        .nav-tabs-center {
+            display: flex;
+            justify-content: center;
+        }
+        .nav-tabs-center .nav-item {
+            margin-right: 1rem;
+        }
+        .nav-tabs-center .nav-link.active {
+            background-color: #054b39; /* Sesuaikan dengan kebutuhan */
+            color: #fff;
+            border-radius: 10px;
+        }
+        .nav-tabs-center .nav-link {
+            color: #000;
+        }
+        .btn-outline-secondary{
+          border-color: #d4a373;
+        }
+        .btn-outline-primary{
+          border-color: #d4a373;
+          color: #172221;
+        }
+        .rating{
+          background-color: #d4a373;
+        }
+        .btn-primary:focus{
+          background-color: #054b39;
+        }
+      </style>
+  </head>
+  <body>
+
+    <div class="container mt-3 py-3 px-4">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <a href="/index.html"><i class="bi bi-arrow-left large-icon"></i></a>
+          <i class="bi bi-bookmark large-icon"></i>
+        </div>
+    
+        <!-- Movie Image and Info -->
+        <div class="mb-3">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item w-100" height="200px" src="https://www.youtube.com/embed/frdj1zb9sMY" allowfullscreen></iframe>
+            </div>
+        </div>
+        <h1>Star Wars: Rogue One</h1>
+        <p>2H 12M Waktu Pemutaran</p>
+        <div class="mb-5">
+            <span class="custom-badge">Action</span>
+            <span class="custom-badge">Adventure</span>
+            <span class="custom-badge">Sci-fi</span>
+          </div>
+    
+        <!-- Tabs -->
+        <ul class="nav nav-tabs nav-tabs-center my-4 border-0">
+            <li class="nav-item">
+              <a class="nav-link active py-3 px-3" href="#about" data-bs-toggle="tab" role="tab" aria-controls="about" aria-selected="true">Tentang & Pesan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-3 px-3" href="#reviews" data-bs-toggle="tab" role="tab" aria-controls="reviews" aria-selected="false">Ulasan</a>
+            </li>
+        </ul>
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <!-- About Movie -->
+            <h3 class="my-3">About Movie</h3>
+            <p>Rogue One: A Star Wars Story adalah film opera luar angkasa epik Amerika Serikat tahun 2016 yang disutradarai Gareth Edwards dan dikarang oleh Chris Weitz dan Tony Gilroy. Film ini diangkat dari cerita karya John Knoll dan Gary Whitta.</p>
+            <!-- Cast -->
+            <h3 class="my-3">Cast</h3>
+            <div class="d-flex overflow-auto mb-4">
+              <div class="card me-3 border-0" style="min-width: 100px;">
+                <img src="../images/home/actor1.png" class="card-img-top" alt="Felicity Jones">
+                <div class="card-body text-start">
+                  <p class="card-text">Felicity Jones</p>
+                </div>
+              </div>
+              <div class="card me-3 border-0" style="min-width: 100px;">
+                <img src="../images/home/actor2.png" class="card-img-top" alt="Diego Luna">
+                <div class="card-body text-start">
+                  <p class="card-text">Diego Luna</p>
+                </div>
+              </div>
+              <div class="card me-3 border-0" style="min-width: 100px;">
+                <img src="../images/home/actor3.png" class="card-img-top" alt="Donnie Yen">
+                <div class="card-body text-start">
+                  <p class="card-text">Donnie Yen</p>
+                </div>
+              </div>
+              <div class="card me-3 border-0" style="min-width: 100px;">
+                <img src="../images/home/actor4.png" class="card-img-top" alt="Ben Mendelsohn">
+                <div class="card-body text-start">
+                  <p class="card-text">Ben M</p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Reserved Ticket -->
+            <h3 class="my-3">Reserved Ticket</h3>
+            <div class="d-flex overflow-auto mb-3" id="ticket-dates">
+              <button class="btn btn-outline-primary me-2" onclick="changeDate('17')">17 Juni</button>
+              <button class="btn btn-outline-secondary me-2" onclick="changeDate('18')">18 Juni</button>
+              <button class="btn btn-outline-secondary me-2" onclick="changeDate('19')">19 Juni</button>
+              <button class="btn btn-outline-secondary me-2" onclick="changeDate('20')">20 Juni</button>
+              <button class="btn btn-outline-secondary me-2" onclick="changeDate('21')">21 Juni</button>
+              <button class="btn btn-outline-secondary" onclick="changeDate('22')">22 Juni</button>
+            </div>
+    
+            <div id="ticket-info">
+              <div class="mb-3">
+                <h4>XXI Royal <span class="float-end">Rp 35k</span></h4>
+                <p class="my-5">HALO</p>
+                <div class="d-flex overflow-auto">
+                  <button class="btn btn-outline-secondary me-2">16.00 Studio 5</button>
+                  <button class="btn btn-outline-secondary me-2">18.00 Studio 4</button>
+                  <button class="btn btn-outline-secondary">20.00 Studio 3</button>
+                </div>
+              </div>
+              <div class="mb-3">
+                <h4>Transmart XXI <span class="float-end">Rp 35k</span></h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="d-flex overflow-auto">
+                  <button class="btn btn-outline-secondary me-2 py-5">16.00 Room 4</button>
+                  <button class="btn btn-outline-secondary me-2">18.00 Room 4</button>
+                  <button class="btn btn-outline-secondary">20.00 Room 3</button>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Choose Seat Button -->
+             <a href="pilih-kursi.html" class="btn btn-primary w-100 py-3">Pilih Kursi</a>
+          </div>
+    
+          <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+            <div class="d-flex justify-content-between align-items-center my-4">
+              <h4>Ulasan Penonton</h4>
+              <span class="badge fs-5 rating">4.3</span>
+            </div>
+            <button class="btn btn-primary w-100 mb-4 py-3" data-bs-toggle="modal" data-bs-target="#tambahUlasanModal">Tambahkan Ulasan</button>
+            <div class="mb-3">
+              <div class="d-flex align-items-start">
+                <img src="../images/home/user1.png" alt="Alexander Nite" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+                <div>
+                  <h5 class="mb-0">Alexander Nite</h5>
+                  <p class="mb-1">Lore film star wars memang yang paling bagus, apalagi aktornya sangat bagus</p>
+                </div>
+                <span class="badge rating ms-auto">5</span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="d-flex align-items-start">
+                <img src="../images/home/user2.png" alt="Miranda Haan" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+                <div>
+                  <h5 class="mb-0">Miranda Haan</h5>
+                  <p class="mb-1">Tidak bagus tidak jelek juga, standar</p>
+                </div>
+                <span class="badge rating ms-auto">3</span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="d-flex align-items-start">
+                <img src="../images/home/user3.png" alt="Miranda Haan" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+                <div>
+                  <h5 class="mb-0">Leo Andro</h5>
+                  <p class="mb-1">Cukup menarik tapi filmnya mudah ketebak</p>
+                </div>
+                <span class="badge rating ms-auto">3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tambahkan Ulasan Modal -->
+          <div class="modal fade" id="tambahUlasanModal" tabindex="-1" aria-labelledby="tambahUlasanLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="tambahUlasanLabel">Tambahkan Ulasan</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="ulasanForm">
+                    <div class="mb-3">
+                      <label for="rating" class="form-label">Rating</label>
+                      <select class="form-select" id="rating" required>
+                        <option value="" disabled selected>Rating mu</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="komentar" class="form-label">Komentar</label>
+                      <textarea class="form-control" id="komentar" rows="3" placeholder="Tuliskan Komentar mu" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Kirim</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/app.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Custom JS for date change -->
+    <script>
+        function changeDate(date) {
+        let dates = document.querySelectorAll('#ticket-dates button');
+        dates.forEach(btn => btn.classList.replace('btn-outline-primary', 'btn-outline-secondary'));
+        document.querySelector(`#ticket-dates button[onclick="changeDate('${date}')"]`).classList.replace('btn-outline-secondary', 'btn-outline-primary');
+
+        let ticketInfo = {
+            '17': [
+            { theater: 'Royal XXI', price: 'Rp 35k', times: ['16.00 </br> Studio 5', '18.00 </br> Studio 4', '20.00 </br> Studio 3', '20.00 </br> Studio 3'] },
+            { theater: 'Transmart XXI', price: 'Rp 40k', times: ['16.00 </br> Studio 4', '18.00 </br> Studio 4', '20.00 </br> Studio 3'] }
+            ],
+            '18': [
+            { theater: 'Bioskop A', price: 'Rp 40k', times: ['15.00 </br> Studio 1', '17.00 </br> Studio 2', '19.00 </br> Studio 3'] },
+            { theater: 'Bioskop B', price: 'Rp 40k', times: ['15.00 </br> Studio 1', '17.00 </br> Studio 2', '19.00 </br> Studio 3'] }
+            ],
+            // Add more dates as necessary
+        };
+
+        let ticketHtml = '';
+        ticketInfo[date].forEach(info => {
+            ticketHtml += `
+            <div class="mb-3">
+                <h4 class="my-4">${info.theater} <span class="float-end">${info.price}</span></h4>
+                <div class="row"> <!-- Gunakan class row tanpa justify-content-center -->
+                    <div class="col-12"> <!-- Gunakan col-md-12 untuk mengatur lebar konten -->
+                        <div class="row"> <!-- Gunakan class row untuk mengatur item secara flex di dalamnya -->
+                            ${info.times.map(time => `<div class="col-auto"><button class="btn btn-outline-primary me-0 mb-3 px-4">${time}</button></div>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        });
+
+        document.getElementById('ticket-info').innerHTML = ticketHtml;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+        changeDate('17');
+        });
+
+        document.getElementById('ulasanForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const rating = document.getElementById('rating').value;
+      const komentar = document.getElementById('komentar').value;
+
+      const ulasanContainer = document.querySelector('#reviews .container') || document.querySelector('#reviews');
+
+      const newReview = document.createElement('div');
+      newReview.classList.add('mb-3');
+      newReview.innerHTML = `
+        <div class="d-flex align-items-start">
+          <img src="../images/home/profil-pict.png" alt="Reviewer" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+          <div>
+            <h5 class="mb-0">Jack Arnold</h5>
+            <p class="mb-1">${komentar}</p>
+          </div>
+          <span class="badge rating ms-auto">${rating}</span>
+        </div>
+      `;
+
+      ulasanContainer.appendChild(newReview);
+
+      // Reset form
+      document.getElementById('ulasanForm').reset();
+
+      // Tutup modal
+      const modalElement = document.getElementById('tambahUlasanModal');
+      const modal = bootstrap.Modal.getInstance(modalElement);
+      modal.hide();
+  });
+    </script>
+
+  </body>
+</html>

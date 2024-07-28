@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Register</title>
+    <style>
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            border-bottom: 1px solid #d2b48c;
+        }
+        .list-group-item:last-child {
+            border-bottom: none;
+        }
+        .list-group-item-icon {
+            margin-right: 10px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header i {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .header h4 {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0;
+        }
+        .custom-arrow{
+            color: black;
+        }
+        .cari{
+            background-color: #F2F2F2;
+            color: #C9CDD8;
+        }
+      </style>
+  </head>
+  <body>
+
+    <div class="container mt-3 py-3 px-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="header">
+                    <a href="index.html"><i class="bi bi-arrow-left custom-arrow"></i></a>
+                    <h4>Kupon</h4>
+                </div>
+                <input type="text" id="searchInput" class="form-control mb-3 cari border-0 py-3" placeholder="Cari Disini" onkeyup="filterList()">
+                <ul id="locationList" class="list-group">
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Ambon</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Balikpapan</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Bandung</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Banjarmasin</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Batam</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Bekasi</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Bengkulu</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Bogor</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Bondowoso</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Bontang</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Cianjur</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Cikarang</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Cilegon</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Cirebon</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Denpasar</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Depok</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Dumai</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Garut</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Gorontalo</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Gresik</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Jakarta</span></li>
+                    <li class="list-group-item"><span><i class="list-group-item-icon bi bi-geo-alt"></i> Jambi</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterList() {
+            var input, filter, ul, li, span, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("locationList");
+            li = ul.getElementsByTagName('li');
+
+            for (i = 0; i < li.length; i++) {
+                span = li[i].getElementsByTagName("span")[0];
+                txtValue = span.textContent || span.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+     <!-- Optional JavaScript; choose one of the two! -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="../js/app.js"></script>
+ 
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+   </body>
+ </html>
